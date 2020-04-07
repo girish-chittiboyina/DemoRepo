@@ -1,0 +1,29 @@
+﻿show remote
+TypeText windowsKey,"r"
+wait 2
+TypeText "chrome",return
+wait 2
+click "maximize"
+TypeText "http://nopcommerce.testplant.com",return
+waitfor 5,"Exercise2/Home"
+Repeat until ImageFound("Exercise2/HTCOneM8AndroidL50")
+	typetext pageDown
+End repeat
+Click "Exercise2/HTCOneM8AndroidL50"
+Repeat until ImageFound("Exercise2/ADDTOCART")
+	typetext downArrow
+End repeat
+waitfor 10, "Exercise2/ADDTOCART"
+Click "Exercise2/ADDTOCART"
+WaitFor 10, "Exercise2/Shoppingcart"
+Click "Exercise2/Shoppingcart"
+(*if ImageFound("Exercise2/Mobile", waitFor:10)
+	LogSuccess "Mobile has been added to shopping cart"
+else
+	LogWarning "Added mobile is not displaying in the shopping cart"
+end if*)
+TypeText controlKey, "w"
+
+
+
+

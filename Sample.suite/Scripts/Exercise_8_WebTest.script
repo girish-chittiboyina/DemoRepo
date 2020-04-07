@@ -1,0 +1,39 @@
+﻿
+to handle I_am_on_the_desktop_screen
+	waitfor 20,"feature/chrome"
+	log "desktop home page"
+end I_am_on_the_desktop_screen
+
+to handle I_click_the_Chrome_icon
+	log "About to click chrome shortcut on desktop"
+	DoubleClick "feature/chrome"
+	waitfor 20,"feature/refresh"
+	log "browser is launched"
+end I_click_the_Chrome_icon
+
+to handle I_am_on_the_Chrome_home_screen
+	waitfor 20,"feature/refresh"
+	log "I am on the chrome home page"
+end I_am_on_the_Chrome_home_screen
+
+to handle I_enter_the_URL_STR
+	params str1
+	typetext controlKey,"l"
+	typetext str1, return
+	waitfor 20, "feature/home"
+	log "Entered url"
+end I_enter_the_URL_STR
+
+to handle I_should_see_the_STR_image
+	params str1
+	if ImageFound(str1)
+		log "Image found"
+	else
+		log "Unable to find the image"
+	end if
+end I_should_see_the_STR_image
+
+to handle I_close_the_browser
+	log "About to close the browser"
+	typetext altKey,"F4"	
+end I_close_the_browser

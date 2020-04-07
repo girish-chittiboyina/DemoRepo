@@ -1,0 +1,11 @@
+﻿show remote
+
+put EveryImageLocation("Exercise6/Greenimage_new") into color
+
+put the number of items of color into list
+
+repeat list times
+	click "Exercise6/Greenimage_new"
+end repeat
+click "Exercise6/Whiteimage_new"
+click "Exercise6/TestPlantimage"

@@ -1,0 +1,12 @@
+﻿set the ScriptLogging to off
+
+RunWithNewResults "Exercise-9A"
+RunWithNewResults "Exercise-9B"
+
+BeginTestCase "calculation"
+put 12345*67890 into cal
+put "result after doing above operation is "&& cal
+EndTestCase "calculation"
+put the result.duration into exetime
+put "time taken for test execution is " && exetime
+

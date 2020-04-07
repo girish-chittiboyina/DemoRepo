@@ -1,0 +1,33 @@
+﻿show remote
+set the SearchRectangle to (0,100,1280,1024)
+repeat with myline = each line of line 2 to the last of file ResourcePath("ResponsiveList.csv")
+	paramscal "Full Name"
+	typetext item 1 of myline
+	paramscal "Email"
+	typetext item 2 of myline
+	paramscal "Message"
+	typetext item 3 of myline
+	if imagefound(text: item 4 of myline)
+		waitfor 10,(text: item 4 of myline)
+		click FoundImageLocation()
+	else
+		LogError "unable to find the color: " &&   item 4 of myline
+	end if
+	waitfor 10,(text: item 5 of myline)
+	click FoundImageLocation()
+	click "Exercise5/SupperTime"
+	waitfor 10,(text: item 6 of myline)
+	click FoundImageLocation()
+	click "Submit"
+	click"ok"
+end repeat
+set the SearchRectangle to ()
+
+put file ResourcePath("ResponsiveList.csv")
+
+repeat with each line of file ResourcePath("ResponsiveList.csv")
+	if repeatIndex() is not 1
+		log repeatIndex()
+	end if
+	
+end repeat

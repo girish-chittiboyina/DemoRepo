@@ -1,0 +1,13 @@
+﻿Set excel to table ("ResponsiveList") of (type:"excel", file:"C:\Users\Lenovo-Yoga\Documents\Sample.suite\Resources\ResponsiveList.xlsx",writable:yes)
+put the records of excel into Data
+
+repeat with each item rowwise of Data
+	delete lastname of rowwise 
+	add record of rowwise to excel
+	put rowwise into exceldata
+	log exceldata
+end repeat
+
+
+//Delete item 6 of rowwise
+//delete line 3 of rowwise

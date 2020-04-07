@@ -1,0 +1,5 @@
+﻿params inp1,inp2
+
+put inp1+inp2 into global outp
+
+return global outp

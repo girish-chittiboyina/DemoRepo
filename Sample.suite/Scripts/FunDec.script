@@ -1,0 +1,26 @@
+﻿to greetuser 
+	put "Welcome to Sensetalk. Happy Scripting!"
+end greetuser
+
+on addtonewtotal newamount
+	add newamount to global total
+end addtonewtotal
+
+function division dividend, divisor
+	if divisor is Zero then return Zero
+	else return dividend/divisor
+end division
+
+function addition value1,value2
+	put value1+value2 into total
+	return total
+end addition
+
+log addition ("2","3")
+
+function substration val1, val2
+	put val1-val2 into sub
+	return sub
+end substration
+
+log substration ("12","3")

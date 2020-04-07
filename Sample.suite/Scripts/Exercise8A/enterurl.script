@@ -1,0 +1,7 @@
+﻿params url
+
+typetext controlKey,"l"
+typetext url,return
+waitfor 40,"Exercise8/refresh"
+
+return "pass"

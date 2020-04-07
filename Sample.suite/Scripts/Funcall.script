@@ -1,0 +1,11 @@
+﻿FunDec.greetuser
+PauseScript
+FunDec.addtonewtotal (1089)
+FunDec.addtonewtotal (1089)
+log global total
+
+log FunDec.addition(10,20)
+
+log FunDec.division(10,4)
+
+log FunDec.substration("12","3")

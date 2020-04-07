@@ -1,0 +1,30 @@
+﻿show RemoteWindow
+TypeText windowsKey,"r"
+wait 2
+TypeText "chrome",return
+wait 2
+TypeText "http://nopcommerce.testplant.com",return
+waitfor 5,"Exercise2/Home"
+MoveTo (text:"Electronics")
+MoveTo (text:"Camera & photo")
+click FoundImageLocation()
+repeat until ImageFound("Exercise3/Amount")
+	typetext downArrow
+end repeat
+set the SearchRectangle to ("Exercise3/image1","Exercise3/image2")
+Click text:"Apple iCam"
+set the SearchRectangle to ()
+repeat until ImageFound("Exercise3/Price")
+	typetext downArrow
+end repeat
+WaitFor 10, "Exercise3/Price"
+put ReadText("Exercise3/Price")
+DoubleClick "Exercise3/Price"
+CaptureScreen
+TypeText controlKey, "c"
+log "Price of the product is $" & RemoteClipboard()
+TypeText controlKey, "w"
+
+
+
+

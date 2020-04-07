@@ -1,0 +1,7 @@
+﻿Parameters 1,3
+
+log the result
+
+put Parameters (1,2) into gto
+
+log gto

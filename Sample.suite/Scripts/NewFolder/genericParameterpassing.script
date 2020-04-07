@@ -1,0 +1,14 @@
+﻿to getTestCaseData testcasename
+
+	Set excel to table ("ResponsiveList") of (type:"excel", file:"C:\Users\Lenovo-Yoga\Desktop\ResponsiveList.xlsx")
+	put the records of excel into Data
+	
+	Repeat with each item rowWise of Data
+		if rowWise.testcasename is testcasename
+			insert rowWise into testCaseData
+		end if
+	end Repeat
+	return testCaseData
+	
+end getTestCaseData
+

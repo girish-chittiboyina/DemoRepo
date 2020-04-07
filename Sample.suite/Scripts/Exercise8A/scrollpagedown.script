@@ -1,0 +1,11 @@
+﻿params image
+
+repeat until ImageFound(image)
+	typetext downArrow
+	if repeatIndex() >10
+		log"after scrolling 10 scrolls we are not able to find the image"
+		exit all
+	end if
+end repeat
+
+return "pass"

@@ -1,0 +1,52 @@
+﻿show remote
+
+TypeText windowsKey, "r"
+TypeText "chrome",return
+typetext "http://newtours.demoaut.com/",return
+WaitFor 10,"Exercise5/SIGNON"
+Click "Exercise5/Register_2"
+waitfor 10,"Exercise5/ContactInformation"
+
+Set excel to table ("ResponsiveList") of (type:"excel", file:"C:\Users\Lenovo-Yoga\Desktop\ResponsiveList.xlsx")
+put the records of excel into Data
+//log Data
+//put data into file("C:\Users\Lenovo-Yoga\Desktop\girish.txt")
+
+repeat with each item rowwise of Data
+	
+	click"Exercise5/FirstName"
+	typetext rowwise.FullName
+	
+	click"Exercise5/Email"
+	typetext rowwise.Email
+	
+	click"Exercise5/Message"
+	typetext rowwise.Address
+	
+	click "Exercise5/color"
+	typetext rowwise.City
+	
+	
+	click "Exercise5/Device"
+	typetext rowwise.State
+	
+	click "Exercise5/lastname"
+	typetext rowwise.LastName
+	
+	repeat until ImageFound("Exercise5/SUBMIT")
+		typetext pageDown
+	end repeat
+	
+	click "Exercise5/SUBMIT"
+	
+	waitfor 20,"Exercise5/NoteYourusernameis"
+	
+	click "Exercise5/REGISTER"
+	
+end repeat
+
+TypeText controlKey,"w"
+
+
+
+

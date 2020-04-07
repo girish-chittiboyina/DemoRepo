@@ -1,0 +1,244 @@
+﻿repeat 2 times
+	TypeText windowsKey,"r"
+	TypeText "chrome",return
+	TypeText "www.google.co.in",return
+	WaitFor 10, "Test/google"
+	Click "Test/Chrome_close"
+end repeat
+
+repeat 2 times
+	click "Test/IE"
+	WaitFor 10, "Test/SearchIcon"
+	click "Test/EnterText"
+	TypeText "news",return
+	WaitFor 5, "Test/Topstories"
+	click "Test/Topstories"
+	RightClick "Test/Firstlink_Topstories"
+	click "Test/Openinnewtab"
+	Click "Test/NewTab"
+	TypeText controlKey, "w"
+	
+	If ImageFound("Test/close") then
+		Log "Image Found In Correct Location"
+		click FoundImageLocation()
+	Else
+		Log "Image Not Found"
+	End if
+	WaitFor 5, "Test/Close_parentwindow"
+	Click "Test/Close_parentwindow"
+end repeat
+
+
+Put 5+5 = 10
+put 5+5
+put 3 is between 2 and 10
+Put 10 is a number
+Put 2 is less than or equal to 5
+Put 2 is less than 5
+Put 2 is equal to 5
+Put 2 is greater than 5
+Put 15 is in "0".."100"
+Put "d" is in "c".."f"
+Put "Girish" contains "irish" and "Shiva" contains "Eva"
+Put "Girish" contains "irish" or "Shiva" contains "Eva"
+Put  "Shiva" contains "Eva" and "Girish" contains "irish"
+Put  "Shiva" contains "Eva" or "Girish" contains "irish"
+log "Irish"
+LogSuccess "Passed"
+LogWarning "Execution will Abort"
+LogError "Failed"
+
+Function FindIconLocation text
+
+	set the SearchRectangle to ((ImageRectangle(text:text, waitFor:10)'s Right, ImageRectangle(text:text, waitFor:30)'s Top+(-100)),(RemoteScreenSize()'s X, ImageRectangle(text:text, waitFor:10)'s bottom+(80)))
+	
+End FindIconLocation
+
+put file ResourcePath("test.txt")
+
+put file resourcepath("ResponsiveList.csv")
+
+put file "C:\Users\Lenovo-Yoga\Desktop\newtext.txt"
+
+repeat with each line of file "C:\Users\Lenovo-Yoga\Desktop\newtext.txt"
+	put it
+end repeat
+
+repeat with each line of file ResourcePath("test.txt")
+	put it
+end repeat
+
+repeat with each line of file "C:\Users\Lenovo-Yoga\Desktop\ResponsiveList.csv"
+	put it
+end repeat
+
+repeat with each line of file ResourcePath("ResponsiveList.csv")
+	put it
+end repeat
+
+repeat with each line of file ResourcePath("ResponsiveList.csv")
+	put item 3 of it
+end repeat
+
+repeat with each item of (1,3,5,7,9)
+	put it & tab & it squared & tab & the square root of it
+end repeat
+
+put username after file resourcepath("List.csv")
+put FullName before file resourcepath("List.csv")
+insert girish after line 1 of file ("userdata.txt")
+
+move file "C:\Users\Lenovo-Yoga\Documents\userdata.csv" to "C:\Users\Lenovo-Yoga\Documents\Sample.suite\Resources"
+move file "C:\Users\Lenovo-Yoga\Documents\userdata.txt" to "C:\Users\Lenovo-Yoga\Documents\Sample.suite\Resources"
+
+put file ResourcePath("girish.txt")
+
+put girish into file "C:\Users\Lenovo-Yoga\Desktop\Girish\gk.txt"
+
+insert myvar after line 2 of file "C:\Users\Lenovo-Yoga\Desktop\Girish\gk.txt"
+
+set numlis to (2,3,4,5)
+log numlis
+insert 1 before item 1 of numlis 
+log numlis
+insert 6 after the last item of numlis
+log numlis
+
+set carlist to ("Maruti","Honda","Hyundai","Mahindra")
+log carlist
+set carl to the number of items of carlist
+log carl
+assert that carl contains "4"
+log any item of carlist
+log item random(carl) of carlist
+
+set carlist to ("Maruti","Honda","Hyundai","Mahindra")
+set carl to the number of items of carlist
+repeat until carlist is empty
+	put the last item of carlist
+	delete the last item of carlist
+end repeat
+log carlist
+
+//repeatindex
+set x to 10
+repeat while x<100
+	add x to x
+	put repeatIndex()
+	log x
+end repeat
+
+DragAndDrop "",""
+
+set girish to 2
+//set girish to (2,0)
+//insert 9 after the last item of girish
+//log girish
+set kumar to 9
+
+//concatenating strings
+log girish&kumar
+log girish&&kumar
+log girish&&&kumar
+
+repeat 4 times
+	add 1 to count
+end repeat
+log count
+
+//accessing data from shared drive
+set myexcel to (type: "excel",file:"C:\Users\Lenovo-Yoga\OneDrive - Ideabytes\responsivepages\ResponsiveList.xlsx")
+set data to the records of myexcel
+repeat with each item rowwise of data
+	insert rowwise.address into adrlis
+	log adrlis
+	delete last item of adrlis 
+end repeat
+
+//sending email
+SendMail (to: "", subject:"Testing", message:"Hey there", SMTP_HOST:"smtp.office365.com", smtp_port:"587",smtp_transport:"tls",smtp_user:"", smtp_password: "")
+
+//clicking one item of similar images
+click item 1 of EveryImageLocation(text:"exit",searchrectangle:())
+
+//logging multiple messages 
+log "This is my first message.", "This is my second message"
+
+//scroll down
+set the SearchRectangle to ("topleft","bottom right")
+repeat until ImageFound(text:"Debugging Scripts")
+	click "down"
+end repeat
+RightClick text:"Debugging Scripts"
+set the SearchRectangle to ()
+click "Openlinkinnewtab"
+
+//reading text
+put ReadText("RT_TL","RT_BR") into avaria
+log avaria
+click ImageLocation("RT_TL")+(25,5)
+typetext avaria
+
+show remote
+put ReadText((130,150),(366,175),IgnoreSpaces:on,IgnoreNewLines:on) into IDvalue
+log IDvalue
+split IDvalue by ":"
+log IDvalue
+log the number of items of IDvalue
+put item 2 of IDvalue into ID
+log ID
+
+put ReadText("topleft_id", "bottomright_id")
+log assignid
+
+
+
+click "RememberMe"
+
+click text:"Search Google"
+put the MouseLocation into cordina
+log cordina
+put cordina-(0,35) into colourreq
+set the colorFormat to "HTML"
+put ColorAtLocation(colourreq) into colr
+log colr
+if colr contains "#10AE8C" then
+	log "Background of the color is green"
+else
+	log "It is a different color"
+end if
+
+
+click "colorat"
+put the MouseLocation into cordina
+set the colorFormat to "HTML"
+put ColorAtLocation(cordina) into colr
+log colr
+if colr contains "#FF0418" then
+	log "Background of the color is Red"
+else
+	log "It is a different color"
+end if
+
+
+set datasheeturl to ("https://docs.google.com/spreadsheets/d/1Q7v62WjxDWMBG6Yrw1Mu-JlXRLXUWGgFEkfLHQiZfJI/export?format=csv")
+
+put datasheeturl.data into list
+
+repeat with each item of list
+	put it
+end repeat
+
+
+set myexcel to (type: "csv",file:"https://docs.google.com/spreadsheets/d/1Q7v62WjxDWMBG6Yrw1Mu-JlXRLXUWGgFEkfLHQiZfJI/export?format=csv")
+set data to the records of myexcel
+
+repeat with each item of data
+	put it
+end repeat
+
+
+
+
+
+

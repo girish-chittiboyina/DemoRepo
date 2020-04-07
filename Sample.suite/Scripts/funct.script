@@ -1,0 +1,30 @@
+﻿function ScrollUntilFound ImageName, myTime
+
+	log ImageName
+	
+	Repeat until imagefound(image:imageName,waitfor:mytime)
+		
+		if imagefound(image:ImageName) then
+			LogSuccess "Image found!"
+			exit repeat
+			
+		end if
+		
+		if the repeatindex is greater than 10 // Read more about the repeatIndex below
+			
+			throw "image not found", imageName&&"not found when scrolling."
+			
+		end if
+		
+		Typetext PageDown
+		
+		Wait 1
+		
+		
+	end repeat
+	
+	put FoundImageLocation() into founditem
+	return founditem
+	
+end ScrollUntilFound
+

@@ -1,0 +1,8 @@
+﻿params browsername
+
+typetext windowsKey,"r"
+waitfor 5,"Exercise8/run"
+typetext browsername,return
+waitfor 20,"Exercise8/chromeicon"
+
+return "pass"

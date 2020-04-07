@@ -1,0 +1,11 @@
+﻿CompareScreen "base"
+put the result into a
+if a is not empty then
+	assert false
+else 
+	assert true
+end if
+log a
+
+
+if CompareScreen("[Baseline_Screens]/base", rectangle:(100,100,500,400)) isn't empty then log "There were differences"

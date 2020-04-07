@@ -1,0 +1,30 @@
+﻿to handle Launch_Nop application
+	Connect "Testing Machine"
+	wait 2
+	TypeText windowsKey, "r"
+	TypeText "chrome" , return
+	//click "maximize"
+	TypeText controlKey, "l"
+	if application is "nop" then
+		TypeText "http://nopcommerce.testplant.com/",return
+		WaitFor 20, text:"Register"
+	else if application is "google" then
+		TypeText "https://www.google.co.in/",return
+		WaitFor 20, text:"Gmail"
+	else if application is "eggplant" then
+		TypeText "https://www.eggplantsoftware.com/",return
+		WaitFor 20, text:"Our Products"
+	end if 
+end Launch_Nop
+
+to act
+
+end act
+
+to act1
+
+end act1
+
+to close_application
+	typetext controlKey, "w"
+end close_application

@@ -1,0 +1,22 @@
+{
+    URLparameters = (
+	{
+	    checkedNumber = <*BY>;
+	    param = "";
+	    showCheckedNumber = <*BY>;
+	    value = "";
+	}
+    );
+    authenticationType = None;
+    httpVerb = GET;
+    oauth1Token = "";
+    password = "QwzAT<F?";
+    requestBody = "";
+    requestBodyFormat = "Text (text/plain)";
+    requestHeaders = "<![CDATA[]]>";
+    requests = "";
+    testResults = "";
+    testScript = "";
+    url = "http://192.168.1.171/login";
+    userName = "anil.tatikonda@eggplant.io";
+}

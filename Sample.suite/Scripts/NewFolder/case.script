@@ -1,0 +1,46 @@
+﻿params testdata
+log testdata
+
+show remote
+
+TypeText windowsKey, "r"
+TypeText "chrome",return
+typetext "http://newtours.demoaut.com/",return
+WaitFor 10,"SIGNON"
+Click "Register"
+waitfor 10,"ContactInformation"
+
+click"Exercise5/FirstName"
+typetext testdata.FullName
+
+click"Exercise5/Email"
+typetext testdata.Email
+
+click"Exercise5/Message"
+typetext testdata.Address
+
+click "Exercise5/color"
+typetext testdata.City
+
+
+click "Exercise5/Device"
+typetext testdata.State
+
+click "Exercise5/lastname"
+typetext testdata.LastName
+
+click "Exercise5/SUBMIT"
+
+waitfor 20,"Exercise5/NoteYourusernameis"
+
+TypeText altKey, "F4"
+
+click "Exercise5/REGISTER"
+
+TypeText controlKey, "w"
+
+
+
+
+
+

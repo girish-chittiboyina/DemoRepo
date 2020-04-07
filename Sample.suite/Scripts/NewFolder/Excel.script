@@ -1,0 +1,25 @@
+﻿set excelfile to resourcepath("ResponsiveList.xlsx")
+set excelsheet to excelfile.worksheet("ResponsiveList")
+set coldata to excelsheet.cellRange("A:F")
+
+//PauseScript
+
+put the celltype of cell("A3") of excelsheet
+
+put Mobile into cell(excelsheet,(1,7))
+
+put Tom into cell("A6") of excelsheet
+
+put cell(excelsheet,"A3") into a3value
+
+if a3value contains "Phil"	
+	repeat with each item rowwise of coldata
+		put rowwise into exceldata
+		log exceldata
+	end repeat
+else
+	log a3value
+end if
+
+//put excelsheet.cellRange("C2","E4") into columnsBasic
+

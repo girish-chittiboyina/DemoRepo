@@ -1,0 +1,41 @@
+﻿show remote
+
+set Name to girish
+set Age to 29
+log Name
+log Name && Age
+log "My name is" && Name && "My age is" && Age
+
+set colorslist to ("green","blue","white","purple")
+
+log any item of colorslist
+
+log item 2 of colorslist
+
+repeat with each item it of colorslist
+	log it
+end repeat
+
+put ReadText("Exercise7/green", "Exercise7/purple") into name2
+log name2
+put ReadText("Exercise7/orange", "Exercise7/blue") into age2
+log age2
+
+put Age+age2 into combinedage
+log combinedage
+
+if age2 is greater than age
+	log name2 && "is older than" && Name
+else
+	log Name && "is older than" && name2
+end if
+
+repeat until ImageFound("Exercise7/TextBox")
+	typetext downArrow
+end repeat
+
+click "Exercise7/TextBox"
+typetext name2 &&"is older than" && Name
+
+click "Exercise7/infoSubmit"
+click "Exercise7/infoOK"

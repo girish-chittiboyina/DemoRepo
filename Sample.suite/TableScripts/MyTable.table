@@ -1,0 +1,67 @@
+<?xml version="1.0"?><TableScript xmlns="http://www.testplant.com/xmlns/TableScript/2014">
+<Lines>
+<Line><Action
+  >BeginTimer</Action
+><Arguments
+  ></Arguments
+><ExpectedValueExpression
+  ></ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >Connect</Action
+><Arguments
+  >192.168.1.27</Arguments
+><ExpectedValueExpression
+  ></ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >Exercise8A/openbrowser</Action
+><Arguments
+  >chrome</Arguments
+><ExpectedValueExpression
+  >pass</ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >Exercise8A/enterurl</Action
+><Arguments
+  >www.eggplant.io</Arguments
+><ExpectedValueExpression
+  >pass</ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >Exercise8A/scrollpagedown</Action
+><Arguments
+  >Exercise8A/image</Arguments
+><ExpectedValueExpression
+  >pass</ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >EndTimer</Action
+><Arguments
+  ></Arguments
+><ExpectedValueExpression
+  ></ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+<Line><Action
+  >Exercise8A/exit</Action
+><Arguments
+  ></Arguments
+><ExpectedValueExpression
+  >pass</ExpectedValueExpression
+><Comment
+  ></Comment
+></Line>
+</Lines>
+</TableScript>

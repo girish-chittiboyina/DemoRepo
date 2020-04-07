@@ -1,0 +1,4 @@
+﻿params MyText
+waitfor 20, Text: MyText
+
+click FoundImageLocation()

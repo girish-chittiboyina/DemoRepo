@@ -1,0 +1,80 @@
+﻿//show remote
+to handle Launch_Nop  browser
+	log browser
+	Connect "Testing Machine"
+	wait 2
+	TypeText windowsKey, "r"
+	TypeText browser , return
+	click "maximize"
+	TypeText controlKey, "l"
+	TypeText "http://nopcommerce.testplant.com/",return
+	WaitFor 20, text:"Register"
+end Launch_Nop
+assert 
+to handle voteinpoll Option
+	log Option
+	repeat until ImageFound("vote")
+		typetext downArrow
+	end repeat
+	click text:Option
+	click "vote"	
+end voteinpoll
+
+to handle viewnews NewsItems
+	repeat until ImageFound("News")
+		typetext downarrow
+	end repeat
+	click text:NewsItems
+	WaitFor 20, NewsItems
+end viewnews
+
+to handle searchkeyword keyword
+	repeat until ImageFound("HomeLogo")
+		typetext upArrow
+	end repeat
+	click "HomeLogo"
+	click "store"
+	typetext keyword
+	click "SEARCH"
+	WaitFor 20, "Advancedsearch"	
+end searchkeyword
+
+to handle selectcategory key
+	click "Categorydropdown"
+	WaitFor 4
+	click text:key
+	repeat until imagefound ("Populartags")
+		typetext downArrow
+	end repeat
+	click "SEARCH"
+	set the SearchRectangle to ("SEARCH","Populartags")
+	waitfor 20,text:"No products were found that matched your criteria."
+	set the SearchRectangle to ()
+end selectcategory
+
+to handle selectadvancedsearch 
+	click "Advancedsearch"
+	repeat until imagefound ("Populartags")
+		typetext downArrow
+	end repeat
+	click "searchinadvance"
+	set the SearchRectangle to ("searchinadvance","Populartags")
+	waitfor 20,text:"No products were found that matched your criteria."
+	set the SearchRectangle to ()
+end selectadvancedsearch
+
+to handle backtohomepage
+	click "HomeLogo"
+	waitfor 20,text:"Register"
+end backtohomepage
+
+to handle changecurrency curropt
+	click "currencychange"
+	click text:curropt
+end changecurrency
+
+to handle quit
+	TypeText altKey, "f4"
+end quit
+
+

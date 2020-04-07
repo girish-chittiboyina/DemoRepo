@@ -1,0 +1,9 @@
+﻿genericParameterpassing.gettestcasedata,"FirstTestCase"
+
+put the result into testdata
+
+repeat with each item of testdata
+	
+	log "Calling from the test case "&&it
+	run "case" it
+end repeat

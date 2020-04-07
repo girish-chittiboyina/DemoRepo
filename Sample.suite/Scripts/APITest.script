@@ -1,0 +1,6 @@
+﻿put AccessToken() into foo
+put foo.url
+put foo.responseHeaders
+put foo.responseBody
+
+

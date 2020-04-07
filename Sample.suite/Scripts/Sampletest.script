@@ -1,0 +1,9 @@
+﻿params browser
+Connect "Testing Machine"
+show remote
+TypeText windowsKey, "r"
+log browser
+TypeText browser , return
+wait 3
+click "maximize"
+TypeText controlKey, "l"

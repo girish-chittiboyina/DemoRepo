@@ -1,0 +1,10 @@
+{
+    adaptiveConstant = <*I7>;
+    commandList = "[{captureRect:[451, 522.728643, 521, 552.728643], elementName:\"image0001\", eventNum:2, folderPath:\"\", hotSpot:[486, 230.271357], imageName:\"image0001\", itemEvent:\"TurboListItemEvent_Click\", itemMode:\"TurboListItemMode_New\", itemType:\"TurboListItemType_Image\", screenShotFile:\"Screen0002.png\", searchType:\"Tolerant of Background\", skipStep:0, userModified:0, usingTempImageName:1, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:\"UNKNOWN\", eventNum:4, folderPath:\"\", hotSpot:[514, 348.623116], imageName:\"\", itemEvent:\"TurboListItemEvent_Click\", itemMode:\"TurboListItemMode_New\", itemType:\"TurboListItemType_Image\", screenShotFile:\"Screen0004.png\", skipStep:0, userModified:0, usingTempImageName:1, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:\"UNKNOWN\", eventNum:6, folderPath:\"\", hotSpot:[578, 394.934673], imageName:\"\", itemEvent:\"TurboListItemEvent_Click\", itemMode:\"TurboListItemMode_New\", itemType:\"TurboListItemType_Image\", screenShotFile:\"Screen0006.png\", skipStep:0, userModified:0, usingTempImageName:1, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:\"UNKNOWN\", eventNum:8, folderPath:\"\", hotSpot:[567, 446.39196], imageName:\"\", itemEvent:\"TurboListItemEvent_Click\", itemMode:\"TurboListItemMode_New\", itemType:\"TurboListItemType_Image\", screenShotFile:\"Screen0008.png\", skipStep:0, userModified:0, usingTempImageName:1, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:\"UNKNOWN\", eventNum:10, folderPath:\"\", hotSpot:[587, 580.180905], imageName:\"\", itemEvent:\"TurboListItemEvent_Click\", itemMode:\"TurboListItemMode_New\", itemType:\"TurboListItemType_Image\", screenShotFile:\"Screen0010.png\", skipStep:0, userModified:0, usingTempImageName:1, waitForTime:-1}]";
+    dilations = <*I3>;
+    maxSize = <*I300>;
+    minSize = <*I16>;
+    savedWithEpfVersion = <*I1911131349>;
+    sessionType = turboSession;
+    sessionUsesDOMObjects = <*BN>;
+}

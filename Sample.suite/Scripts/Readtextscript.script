@@ -1,0 +1,23 @@
+﻿
+set the SearchRectangle to  ScreenPart("BottomHalf")
+put ReadText("search_TL", "search_BR") into readtext
+
+put "this is a samplle test which will be shown in the demo? and this is not the same as before" into readtext
+split readtext by "?"
+log the number of items of readtext
+put item 1 of readtext into file "C:\Users\Lenovo-Yoga\Desktop\read.txt"
+put returnKey after file "C:\Users\Lenovo-Yoga\Desktop\read.txt"
+put item 2 of readtext after file "C:\Users\Lenovo-Yoga\Desktop\read.txt"
+set the SearchRectangle to ()
+
+put abc into avar
+if avar contains abc
+	put "valid data" into file "C:\Users\Lenovo-Yoga\Desktop\read.txt"
+else
+	put "invalid data" into file "C:\Users\Lenovo-Yoga\Desktop\read.txt"
+end if
+
+
+put funct.ScrollUntilFound (myImage, 10)
+
+

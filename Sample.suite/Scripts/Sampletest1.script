@@ -1,0 +1,14 @@
+﻿params browser,url
+log url
+TypeText url,return
+waitfor 5,"Exercise2/Home"
+Repeat until ImageFound("Exercise2/HTCOneM8AndroidL50")
+	typetext pageDown
+End repeat
+Click "Exercise2/HTCOneM8AndroidL50"
+Repeat until ImageFound("Exercise2/ADDTOCART")
+	typetext downArrow
+End repeat
+waitfor 10, "Exercise2/ADDTOCART"
+Click "Exercise2/ADDTOCART"
+TypeText controlKey, "w"
